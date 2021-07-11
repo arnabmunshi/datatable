@@ -1,0 +1,11 @@
+.dt-buttons {
+  float: left;
+  margin-right: 10px;
+}
+.dataTables_length {
+  float: left;
+}
+.dataTables_filter {
+  float: right;
+  margin-bottom: 10px;
+}

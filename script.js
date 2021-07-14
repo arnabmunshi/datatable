@@ -3,22 +3,31 @@ $(document).ready(function () {
     paging: false, // hide pagination
     scrollY: 200, // fixed header
     language: {
-      search: "Search in table:", // search box label
+      search: "Search in table:", // search box label [info: we can change other label also]
     },
 
     dom: "Blfrtip",
     buttons: [
+      // setting custom button
+      {
+        text: `<i class="fas fa-plus-circle mr-2"></i><?= $lm->add_account[$lang] ?>`,
+        className: "btn-sm",
+        action: function ( e, dt, node, config ) {
+          alert('hello');
+        }
+      },
+      // setting custom button end
       {
         extend: "csvHtml5",
         text: '<i class="fas fa-file-csv me-2"></i>CSV',
         titleAttr: "CSV",
-        className: "btn-sm btn-success",
+        className: "btn-sm",
       },
       {
         extend: "excelHtml5",
         text: '<i class="fas fa-file-excel me-2"></i>EXCEL',
         titleAttr: "EXCEL",
-        className: "btn-sm btn-success",
+        className: "btn-sm",
       },
     ],
 
